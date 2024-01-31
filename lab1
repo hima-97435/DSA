@@ -1,0 +1,177 @@
+//   VS code   Author NAme-->Himanshu Pokhriyal
+#include<bits/stdc++.h>
+using namespace std;
+void matrix_multiply(int *matrix1, int *matrix2, int *result, int rows1, int cols1, int rows2, int cols2) {
+    if (cols1 != rows2) {
+        std::cout << "Matrices cannot be multiplied. Invalid dimensions." << std::endl;
+        return;
+    }
+
+    for (int i = 0; i < rows1; ++i) {
+        for (int j = 0; j < cols2; ++j) {
+            int sum = 0;
+            for (int k = 0; k < cols1; ++k) {
+                sum += *(matrix1 + i * cols1 + k) * *(matrix2 + k * cols2 + j);
+            }
+            *(result + i * cols2 + j) = sum;
+        }
+    }
+}
+
+void display_matrix(int *matrix, int rows, int cols) {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            std::cout << *(matrix + i * cols + j) << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+
+
+int main(){
+// // int n;
+// // cout<<"Enter the size of Array :"<<endl;
+// // cin>>n;
+// // int array[n];
+
+// //  01 --> SUM OF ALL ARRAY ELEMENT
+
+// int sum=0;
+// int array[5]={1,2,3,4,5};
+// for(int i=0;i<5;i++){
+// sum+=array[i];
+// }
+// cout<<sum<<endl;
+
+// //  02 --> Create an array ‘a1’ with ‘n’ elements. 
+// Insert an element in ith position of ‘a1’ and also delete an element from jth position of ‘a1’.
+
+int n;
+cout<<"Enter the size of Array :";
+cin>>n;
+int array1[n];
+
+for(int i=0;i<n;i++){
+    array1[i]=i+1;
+
+}
+for(int i=0;i<n;i++){
+   cout<<array1[i]<<" ";
+
+}
+cout<<endl;
+
+int i,j=0;
+int a23=0;
+cout<<"Enter the position where  to insert element:"<<endl;
+cin>> i;
+cout<<"What to enter at i th position:"<<endl;
+cin>>a23;
+array1[i]=a23;
+
+cout<<"Enter the position where  to delete element:"<<endl;
+cin>>j;
+array1[j]=0;
+
+for(int i=0;i<n;i++){
+   cout<<array1[i]<<" ";
+
+}
+
+//  03 -->Convert uppercase string to lowercase using for loop
+
+// string str="ADiIU";
+// cout<<str<<endl;
+// for( char& c :str){
+//     if(c>='A' && c<='Z'){
+//        c=c-'A'+'a';
+
+//     }
+//     else{
+//         continue;
+//     }
+// }
+// cout<<str;
+
+// 04 -->Find the sum of rows and columns of matrix of given order (row x column).
+
+// int matrix[3][3]={1,2,3,4,5,6,12,32,34};
+// int sum_of_row=0;
+// int sum_of_col=0;
+// for(int i=0;i<3;i++){
+//   for(int j=0;j<3;j++){
+//     sum_of_row+=matrix[i][j];
+//     sum_of_col+=matrix[j][i];
+//   }
+
+// }
+
+// int sum_0frow=0
+// int rowNO,colNo=0;
+// int sum_0fcoloumn=0;
+
+// cout<<"Enter the row number as well as coloumn number which you need to find the sum "<<endl;
+// cin>>rowNO>>colNo;
+// cout<<rowNO<<" "<<colNo<<endl;
+// for(int i=0;i<3;i++){
+//   cout<<sum_0frow<<" ";
+//    sum_0frow+=matrix[rowNO][i];
+//    sum_0fcoloumn+=matrix[i][colNo];
+//   //  cout<<sum_0frow<<" ";
+// }
+// cout<<sum_0frow<<endl;
+// cout<<sum_0frow<<" " <<sum_0fcoloumn<<endl;
+
+
+// 05-->Find the product of two matrices using pointers
+ 
+
+// int alpha[2][3]={{1,2,3},{4,5,6}};
+// int beta[3][2]={{7,8},{9,10},{11,12}};
+// int result[2][2];
+
+// matrix_multiply(&alpha[0][0] , &beta[0][0], &result[0][0],2,3,3,2);
+
+// cout<<"Matrix 1:"<<endl;
+// display_matrix(&alpha[0][0],2,3);
+
+// cout<<"Matrix 2:"<<endl;
+// display_matrix(&beta[0][0],3,2);
+
+// cout<<"Result :"<<endl;
+// display_matrix(&result[0][0],2,2);
+
+
+// 06--> Store ‘n’ numbers (integers or real) in an array. 
+// Conduct a linear search for a given number and report success or failure in the form of a suitable message.
+// int num,n=0 ;
+// cout<<"Enter the size of array  : ";
+// cin>>n;
+// cout<<"Enter a Number to search for :";
+// cin>>num;
+// int array1[n];
+// // int i=0;
+// for(int i=0;i<n;i++){
+//     cout<<"Enter the element at indexing : "<<i<<" ";
+//     cin>>array1[i];
+    
+
+//     }
+//     for(int j=0;j<n;j++){
+// if(array1[j] == num){
+//     cout<<"Success";
+//     break;
+// }
+// if(j==n-1 && array1[j]!=num){
+//     cout<<"Failure";
+// } 
+
+//     }
+    
+        // cout<<"Failure";
+    
+
+  return 0;
+
+}
