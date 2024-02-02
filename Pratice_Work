@@ -1,0 +1,221 @@
+// Basics of Struct 
+// Author-->Himanshu Pokhriyal
+// Date-->23 JANUARY 2024
+
+#include<bits/stdc++.h>
+// #include<bool
+using namespace std;
+struct student{
+  char name[23];
+  int roll_no;
+}st1,st2;
+struct Student{
+  char name[23];
+  int roll_no;
+  float x;
+  bool y;
+  long int z;
+  long long int sd;
+}s1,s2;
+
+struct STUDENT{
+int roll_number;
+char first_name[23];
+char lastname[23];
+
+}st[4];
+
+struct STudent{
+  char name[20];
+  int roll;
+  float mark[6];
+}ST1[2];
+
+struct date{
+  int day;
+  int month;
+  int year;
+
+};
+struct personal_record{
+  char name[20];
+  struct date birthday;
+  float marks;
+}person;
+
+struct book{
+  char name[20];
+  int pages;
+  float prices;
+};
+
+// cout<<"Enter the value";
+int main(){
+
+
+  // Question -01
+
+  //  cout<<"Enter the name : ";
+  //  cin>>st1.name;
+  //  cout<<"Enter the Roll Number :  ";
+  //  cin>>st1.roll_no;  
+  //  st2=st1;
+
+  //  s1=st1; 
+  // for the above statment 'operator=' (operand types are 'Student'  and 'student')
+
+// if(st1.roll_no == st2.roll_no){
+//   cout<<"ROll Number is Same"<<endl;
+// }
+
+// cout<<st1.name<<endl<<st1.roll_no<<" "<<endl;
+// cout<<st2.name<<endl<<st2.roll_no<<" "<<endl;
+
+// cout<<s1.name<<endl<<s1.roll_no<<" "<<s1.x<<" "<<s1.y<<" "<<s1.z<<" "<<s1.sd;
+
+// Size of  struct memeber which are not being declared 
+
+// As you can see above in code we had not declared s1 as such which mean we did 
+// not declared the name, roll_number  of s1 there fore which concludes 
+// that while we are accessing value such as name,roll_Number of s1 it would
+//  give values as 
+
+// For string -->blank Space;
+// for Int,bool,float,long int ,long long int  -->0;
+
+
+
+// Question -02) 
+
+// int array[5];
+// for(int i=0;i<5;i++){
+// cout<<"Enter your Roll_Number ";
+// cin>>st[i].roll_number;
+// cout<<"Enter your first name ";
+// cin>>st[i].first_name;
+// cout<<"Enter your last name ";
+// cin>>st[i].lastname;
+
+// array[i]=st[i].roll_number;
+
+// }
+
+// Here i am trying to sort the array which has roll number of structure STUDENT .
+// // sort(array,array+5);
+
+// Here i am trying to sort the st array with their roll_number by calling it as written below .
+// sort(st[0].roll_number,st[5].roll_number);
+
+
+// Here i am trying to check whether it is sorting or not 
+// of course Array one is doing sorting properly but this last approch is giving error.
+//  error: invalid type argument of unary '*' (have 'int')
+// for(int i=0;i<5;i++){
+//   cout<<st[i].roll_number<<" ";
+// }
+
+
+
+
+// sort(st.begin() , st.end(),compareByRollNumber);
+// for(int i=0;i<5;i++){
+// cout<<st[i].roll_number<<endl<<st[i].first_name<<" "<<st[i].lastname<<endl;
+
+// // }
+// cout<<st[0]
+
+// Question -03 -> A:
+// int sum=0;
+// int n;
+// cout<<"Enter the number of employee ";
+// cin>>n;
+// struct  employee{
+//   char name[29];
+//   char address[56];
+//   int age;
+//   int salary;
+// }arr[n];
+
+// for(int i=0;i<n;i++){
+//   cout<<"Enter the name: ";
+//   cin>>arr[i].name;
+//   cout<<"Enter the address: ";
+//   cin>>arr[i].address;
+//   cout<<"Enter the age: ";
+//   cin>>arr[i].age;
+//   cout<<"Enter the salary: ";
+//   cin>>arr[i].salary;
+// sum+=arr[i].salary;
+// }
+// cout<<"Average salary is : "<<(sum/n)<<endl;
+
+
+// Question-03 ->B:
+
+
+
+
+
+// Q4--> Array within a structure
+
+// for(int i=0;i<2;i++){
+//   cout<<"Enter the name: ";
+//   cin>>ST1[i].name;
+//   cout<<"Enter the roll number : ";
+//   cin>>ST1[i].roll;
+//   for (int j=0;j<6;j++){
+//  cout<<"Enter the Marks of subject of "<<(j+1) <<" is : ";
+//   cin>>ST1[i].mark[j];
+//   }
+ 
+// }
+// for (int i=0;i<2;i++){
+//   cout<<"The name of the user is %s "<<ST1[i].name<<endl;
+//     cout<<"The roll Number  of the user is %d "<<ST1[i].roll<<endl;
+
+//   for( int j=0;j<6;j++){
+//   cout<<"The nMark of the "<<j<<" is : "<<(ST1[i].mark[j])<<endl;
+//   }
+// }
+// \\
+
+// Q5-->
+// Nested Structure -->
+
+// cout<<"Enter the name : ";
+// cin>>person.name;
+// cout<<"Enter the birthday : ";
+// cin>>person.birthday.day;
+// cout<<"Enter the birth month : ";
+// cin>>person.birthday.month;
+// cout<<"Enter the birth year : ";
+// cin>>person.birthday.year;
+// cout<<"Enter the marks : ";
+// cin>>person.marks;
+
+// cout<<"The name of the student is : "<<person.name<<endl;
+// cout<<"The birthdate of the student is : "<<person.birthday.day<<"/"<<person.birthday.month<<"/"<<person.birthday.year<<endl;
+// cout<<"The Mark of student is : "<<person.marks;
+
+
+// Q6-->
+// Pointer to structure 
+struct book *bptr;
+bptr=(struct book*)(sizeof(struct book));
+
+cout<<"Enter Name : ";
+cin>>bptr->name;
+cout<<"Enter Nnumber of pages : ";
+cin>>bptr->pages;
+cout<<"Enter the prices : ";
+cin>>bptr->prices;
+
+cout<<"The Name is : "<<bptr->name;
+cout<<"The Naumber of pages are : "<<bptr->pages;
+cout<<"The price  is : "<<bptr->prices;
+
+
+
+
+return 0;
+}
