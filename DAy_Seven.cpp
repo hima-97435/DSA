@@ -26,6 +26,8 @@ for( int i=1;i<=5;i++){
 return 0;
 
 }
+Time Complexity--> O(2N)
+Space Complexity -->O(1)
 Question --2 My pow.
 Link --> https://www.naukri.com/code360/problems/find-x-raised-to-power-n-_626560?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
 
@@ -59,6 +61,10 @@ ans reduce nn by 1. Else multiply x with itself and divide nn by two.
   if (n < 0) ans = (double)(1.0) / (double)(ans);
   return ans;
 }
+Time Complexity--> O(logN)
+Space Complexity-->O(1)
+
+
 
 
 
