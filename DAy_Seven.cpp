@@ -26,7 +26,7 @@ for( int i=1;i<=5;i++){
 return 0;
 
 }
-Time Complexity--> O(2N)
+Time Complexity--> O(N**2)
 Space Complexity -->O(1)
 Question --2 My pow.
 Link --> https://www.naukri.com/code360/problems/find-x-raised-to-power-n-_626560?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
